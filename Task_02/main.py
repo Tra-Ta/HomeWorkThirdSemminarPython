@@ -29,7 +29,7 @@ listKey = listKey.split(", ")
 
 myDict = {listKey[i]: listValue[i] for i in range(0, len(listKey), 1)} 
 
-wordUser = str(input('Введите слово ТОЛЬКО на русском или английском языке: -> '))
+wordUser = str(input('Введите ваше слово Большими буквами и ТОЛЬКО на русском или английском языке: -> '))
 wordUser = list(wordUser)
 
 res = 0
@@ -39,4 +39,7 @@ for k, v in myDict.items():
         if k == item:
             res += v
 
-print(f'Стоимость введенного вами слова равна {res}')
+if res == 0:
+    print('БОЛЬШИМИ БУКВАМИИИИИИ!!!!!')
+else:
+    print(f'Стоимость введенного вами слова равна {res}')
